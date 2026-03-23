@@ -23,7 +23,7 @@ body {
 
 @font-face {
     font-family: 'Dancing Script';
-    src: url('/Casa Gatchailan Restobar/asset/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format("truetype");
+    src: url('Casa Gatchailan Restobar/asset/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format("truetype");
 }
 
 @font-face {
