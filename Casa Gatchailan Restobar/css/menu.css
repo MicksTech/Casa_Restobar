@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #000000;
+    --bg-primary: #975305;
+    --bg-secondary: #000000;
+    --accent: #808080;
+}
+
+body {
+    background-image: url('/Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('/Casa Gatchailan Restobar/asset/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url('Casa Gatchailan Restobar/asset/fonts/Fira_Sans_Condensed') format('truetype');
+}
+
+.aside-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 220px;
+    background: var(--bg-secondary);
+    gap: 10px;
+}
+
+.aside-container a {
+    color: var(--color-primary);
+    margin-top: 10px ;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.nav-list li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-list li a:hover::before {
+    width: 100%;
+}
+
+.nav-list li a:hover {
+    letter-spacing: 1px;
+}
+
+.container-menus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 20px;
+    gap: 10px;
+}
+
+.container-menus h4 {
+    font-family: 'Dancing Script', sans-serif;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+    font-weight: 300;
+}
+
+.container-menus a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: normal;
+}
+
+.container-orders {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    width: 100%;
+    max-width: 1110px;
+}
+
+@media (max-width: 768px) {
+    .container-orders {
+        flex-direction: column;
+    }
+}
+
+.card-one-menu {
+    width: 220px;
+    height: 330px;
+    background: var(--bg-primary);
+    border-radius: 3px;
+}

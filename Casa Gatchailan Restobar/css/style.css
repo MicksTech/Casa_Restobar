@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: #000000;
+    --bg-primary: #975305;
+    --bg-secondary: #000000;
+    --accent: #808080;
+}
+
+body {
+    background-image: url('/Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('/Casa Gatchailan Restobar/asset/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url('Casa Gatchailan Restobar/asset/fonts/Fira_Sans_Condensed') format('truetype');
+}
+
+.container-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.container-header a {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+    margin-right: 20px;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--bg-secondary);
+    height: 100vh;
+    width: 100%;
+    max-width: 330px;
+    transition: right 0.4s ease;
+}
+
+/* ✅ SHOW MENU */
+.nav-list.active {
+    right: 0;
+}
+
+/* LINKS */
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+/* 🔥 ANIMATED UNDERLINE */
+.nav-list li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-list li a:hover::before {
+    width: 100%;
+}
+
+/* OPTIONAL HOVER EFFECT */
+.nav-list li a:hover {
+    letter-spacing: 1px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    gap: 10px;
+}
+
+.main-container h4 {
+    color: var(--color-primary);
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: var(--bg-primary);
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.simple-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .simple-container {
+        flex-direction: column;
+    }
+}
+
+/* Combine mo na para clean */
+.card-menu-one,
+.card-menu-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 220px;
+    height: 330px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.card-menu-one img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid var(--color-primary);
+}
+
+.card-menu-one h5 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.3rem;
+}
+
+.card-menu-one a {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+    border-radius: 50px;
+    padding: 3px 5px;
+}
+
+.card-menu-two img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid var(--color-primary);
+}
+
+.card-menu-two h5 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.3rem;
+}
+
+.card-menu-two a {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+    border-radius: 50px;
+    padding: 3px 5px;
+}
+
+.container-book {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container-book h4 {
+    font-family: 'Dancing Script', sans-serif;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 450px;
+    width: 100%;
+    max-width: 330px;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 100%;
+    max-width: 330px;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.container-input input {
+    background: var(--bg-primary);
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+}
+
+.container-input ::placeholder {
+    color: var(--color-primary);
+    font-family: sans-serif;
+}
+
+.container-input button{
+    width: 100px;
+    background: var(--bg-primary);
+    border: none;
+    color: var(--color-primary);
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.container-input input:focus{
+    border: 1px solid var(--accent);
+    outline: none;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .container-book {
+        flex-direction: column;
+    }
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--bg-primary);
+    height: 250px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        gap: 20px;
+        min-height: 50vh;
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-container h4 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.contact-container a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.container-links a {
+    font-size: 1.9rem;
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+.container-time h4 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.container-time h5 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-align: center;
+    color: var(--color-primary);
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Casa Gatchailan Restobar/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Casa Gatchalian Restobar</title>
+</head>
+
+<body>
+
+    <header class="container-header">
+        <a href="">Casa</a>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu(this)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list" id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="/OurOrder/Order.html">Our Menu</a></li>
+                <li><a href="">Book a Table</a></li>
+                <li><a href="">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="main-container" data-aos="fade-up">
+                <h4>Casa Gatchalian Restobar</h4>
+                <a href="">order now</a>
+            </div>
+        </section>
+
+        <section class="simple-container">
+            <div class="card-menu-one" data-aos="fade-right">
+                <img src="/Casa Gatchailan Restobar/asset/image/Casa bg.jpg" alt="">
+                <h5>Special Sisig</h5>
+                <span id="price-one"></span>
+                <a href="">Order now</a>
+            </div>
+            <div class="card-menu-two" data-aos="fade-left">
+                <img src="/Casa Gatchailan Restobar/asset/image/Casa bg.jpg" alt="">
+                <h5>Special Sisig</h5>
+                <span id="price-two"></span>
+                <a href="">Order now</a>
+            </div>
+        </section>
+
+        <section class="container-book">
+            <div class="container-form">
+                <h4>Book a Table</h4>
+                <form class="container-input">
+                    <input type="text" name="name" placeholder="Your name">
+
+                    <input type="tel" name="tel" placeholder="+63 123 456 789">
+
+                    <input type="email" name="email" placeholder="Your email">
+
+                    <input type="number" name="number" placeholder="How many people">
+
+                    <button>book now</button>
+                </form>
+            </div>
+            <div id="map" data-aos="zoom-in"></div>
+        </section>
+
+        <footer>
+            <div class="container-footer">
+                <div class="contact-container">
+                    <h4>Contact us</h4>
+                    <a href="">
+                        <i class="fa-solid fa-location-dot">
+                        </i>
+                        Location
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-phone"></i>
+                        0912345678
+                    </a>
+                    <a href="">
+                        <i class="fa-solid fa-envelope"></i>
+                        lorem@gmail.com
+                    </a>
+                </div>
+
+                <div class="container-links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+
+                <div class="container-time">
+                    <h4>Opening hours</h4>
+
+                    <h5>Everyday
+                        <p>11:00am to 11:00pm</p>
+                    </h5>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="/Casa Gatchailan Restobar/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>
