@@ -131,7 +131,7 @@ body {
     min-height: 100vh;
     width: 100%;
     gap: 10px;
-    background-image: url('Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
+    background-image: url('/Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,7 +236,7 @@ body {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url('Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
+    background-image: url('/Casa Gatchailan Restobar/asset/image/Casa bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
